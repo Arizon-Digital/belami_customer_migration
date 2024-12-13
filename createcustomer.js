@@ -197,5 +197,5 @@ const processCsv = (csvFilePath) => {
   };
 
 // Specify the CSV file path
-const csvFilePath = './customer_data/batch1customer.csv';
+const csvFilePath = './customer_data/belami50k.csv';
 processCsv(csvFilePath);
