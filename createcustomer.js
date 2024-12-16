@@ -6,6 +6,8 @@ const XLSX = require('xlsx');
 // BigCommerce API Configuration
 const STORE_HASH = '2zedqgpp8x'; 
 const AUTH_TOKEN = 'n46qow9wwkq2gpvq0r4av4gpi6sxddc'; 
+const csvFilePath = './customer_data/belami100k_pg2.csv';
+const resultsfilepath = './results/belami100k_pg2_results.xlsx';
 
 // Helper function to create a customer
 const createCustomer = async (customer) => {
@@ -30,7 +32,7 @@ const createCustomer = async (customer) => {
 // Helper function to post metafields for a customer
 const postMetafield = async (customerId, key, value) => {
   const data = {
-    permission_set: 'read',
+    permission_set: 'write',
     namespace: 'custom_fields',
     key: key,
     value: value,
@@ -163,7 +165,7 @@ const processCsv = (csvFilePath) => {
         }
   
         // Step 3: Write results to an Excel file
-        writeResultsToExcel(results, 'report1.xlsx');
+        writeResultsToExcel(results, resultsfilepath);
       });
   };
   
@@ -197,5 +199,4 @@ const processCsv = (csvFilePath) => {
   };
 
 // Specify the CSV file path
-const csvFilePath = './customer_data/batch1customer.csv';
 processCsv(csvFilePath);
