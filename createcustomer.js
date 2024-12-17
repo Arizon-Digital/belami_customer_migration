@@ -6,8 +6,8 @@ const XLSX = require('xlsx');
 // BigCommerce API Configuration
 const STORE_HASH = '2zedqgpp8x'; 
 const AUTH_TOKEN = 'n46qow9wwkq2gpvq0r4av4gpi6sxddc'; 
-const csvFilePath = './customer_data/belami100k_pg2.csv';
-const resultsfilepath = './results/belami100k_pg2_results.xlsx';
+const csvFilePath = './customer_data/belami150l_pg1.csv';
+const resultsfilepath = './results/belami150l_pg1_results.xlsx';
 
 // Helper function to create a customer
 const createCustomer = async (customer) => {
